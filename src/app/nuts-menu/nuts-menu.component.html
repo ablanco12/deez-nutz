@@ -1,1 +1,9 @@
-<p>nuts-menu works!</p>
+<div class="nuts-menu">
+    <h1>Our Nuts Menu</h1>
+    <div class="nut-card" *ngFor="let nut of nuts">
+      <img [src]="'assets/nuts-images/' + nut.imageUrl" alt="{{ nut.name }}" class="nut-image">
+      <h2>{{ nut.name }}</h2>
+      <p>{{ nut.description }}</p>
+    </div>
+  </div>
+  

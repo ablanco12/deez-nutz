@@ -1,0 +1,22 @@
+.nuts-menu {
+    text-align: center; /* Center the content horizontally */
+    margin-top: 20px;   /* Add some margin at the top */
+  }
+  
+  .nut-card {
+    display: inline-block; /* To allow cards to appear side by side */
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    width: 200px;
+    margin: 10px;
+  }
+  
+  .nut-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  

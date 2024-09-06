@@ -1,0 +1,20 @@
+.home-container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .banner-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff9800;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
