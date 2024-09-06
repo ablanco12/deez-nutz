@@ -1,1 +1,66 @@
-/* You can add global styles to this file, and also import other style files */
+/* General styling for the nav */
+nav {
+    background-color: #333;          /* Dark background for the nav */
+    padding: 10px 0;                 /* Padding for spacing */
+    position: fixed;                 /* Fix to the top of the page */
+    width: 100%;                     /* Full width */
+    top: 0;                          /* Stick to the top */
+    margin: 0;
+    box-sizing: border-box;           /* Ensure padding doesn't affect width */
+    z-index: 1000;                   /* Make sure it stays above other content */
+  }
+  
+  /* Styling for the unordered list inside the nav */
+  nav ul {
+    list-style: none;                /* Remove default bullet points */
+    display: flex;                   /* Flexbox layout for horizontal alignment */
+    justify-content: center;         /* Center the links horizontally */
+    padding: 0;                      /* Remove any default padding */
+    margin: 0;                       /* Remove any default margin */
+    width: 100%;                     /* Ensure it spans full width */
+    box-sizing: border-box;           /* Padding doesn't affect width */
+  }
+  
+  /* Styling for the list items */
+  nav ul li {
+    margin: 0 15px;                  /* Spacing between links */
+  }
+  
+  /* Styling for the links */
+  nav ul li a {
+    color: white;                    /* White text */
+    text-decoration: none;            /* Remove underline */
+    font-size: 1.2em;                /* Slightly larger text */
+    padding: 10px 15px;              /* Padding for clickable area */
+    transition: background-color 0.3s ease;  /* Smooth background change on hover */
+  }
+  
+  /* Hover effect for links */
+  nav ul li a:hover {
+    background-color: #ff9800;       /* Orange background on hover */
+    border-radius: 5px;              /* Round the edges */
+  }
+  
+  /* Responsive behavior for smaller screens */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;        /* Stack links vertically on small screens */
+    }
+  
+    nav ul li {
+      margin: 10px 0;                /* Add margin between vertical links */
+    }
+  }
+  
+  /* Resetting body and html margins */
+  html, body {
+    margin: 0;                       /* Reset body and html margins */
+    padding: 0;                      /* Remove default padding */
+    box-sizing: border-box;           /* Include padding and border in element's total width/height */
+  }
+  
+  /* Additional body padding to account for fixed navbar */
+  body {
+    padding-top: 70px;               /* Adjust this based on navbar height */
+  }
+  

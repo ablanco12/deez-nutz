@@ -1,20 +1,33 @@
 .home-container {
-    text-align: center;
-    margin-top: 50px;
+    display: flex;
+    flex-direction: column;  /* Stack elements in a single column */
+    align-items: center;     /* Center elements horizontally */
+    justify-content: center; /* Center elements vertically */
+    min-height: 50vh;       /* Make the container fill the viewport height */
+    text-align: center;      /* Center the text */
   }
   
   .banner-image {
-    max-width: 100%;
+    max-width: 25%;
     height: auto;
+    margin: 20px 0;          /* Add margin above and below the image */
   }
   
   .cta-button {
     display: inline-block;
-    margin-top: 20px;
     padding: 10px 20px;
     background-color: #ff9800;
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    margin-top: 20px;        /* Add space above the button */
+  }
+  
+  h1 {
+    margin-bottom: 20px;     /* Add space below the title */
+  }
+  
+  p {
+    margin-bottom: 20px;     /* Add space below the paragraph */
   }
   
