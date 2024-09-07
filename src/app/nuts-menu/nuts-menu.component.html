@@ -4,6 +4,15 @@
       <img [src]="'assets/nuts-images/' + nut.imageUrl" alt="{{ nut.name }}" class="nut-image">
       <h2>{{ nut.name }}</h2>
       <p>{{ nut.description }}</p>
+      <button class="nut-button" (click)="addToCart(nut)">Add to Cart</button>
     </div>
+  </div>
+  
+  <!-- Optional: Display the Cart -->
+  <div class="cart-summary" *ngIf="cart.length > 0">
+    <h2>Your Cart</h2>
+    <ul>
+      <li *ngFor="let item of cart">{{ item.name }}</li>
+    </ul>
   </div>
   

@@ -1,22 +1,144 @@
+/* Main container styling */
 .nuts-menu {
-    text-align: center; /* Center the content horizontally */
-    margin-top: 20px;   /* Add some margin at the top */
-  }
-  
-  .nut-card {
-    display: inline-block; /* To allow cards to appear side by side */
+    display: grid;                   /* Use grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 20px;                       /* Space between the cards */
+    justify-items: center;           /* Center items within their grid cells */
+    padding: 50px 20px;
+    background-color: #f7f7f7;       /* Light background */
+    border-radius: 10px;
     text-align: center;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 16px;
-    width: 200px;
-    margin: 10px;
-  }
-  
-  .nut-image {
-    width: 100px;
-    height: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Heading styling */
+.nuts-menu h1 {
+    grid-column: 1 / -1;             /* Make the heading span both columns */
+    font-size: 2.8em;
+    color: #333;
+    margin-bottom: 40px;
+    letter-spacing: 2px;             /* Add space between letters */
+}
+
+/* Nut card styling */
+.nut-card {
+    background-color: #fff;          /* White background for cards */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Add shadow */
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;                     /* Ensure full width in grid cell */
+    max-width: 300px;                /* Limit card width */
+}
+
+/* Nut card hover effects */
+.nut-card:hover {
+    transform: translateY(-10px);    /* Lift the card when hovered */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+}
+
+/* Image styling */
+.nut-image {
+    width: 150px;
+    height: 150px;
     object-fit: cover;
-    border-radius: 50%;
-  }
-  
+    border-radius: 50%;              /* Circle shape for the image */
+    margin-bottom: 15px;
+}
+
+/* Nut name styling */
+.nut-card h2 {
+    font-size: 1.7em;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Nut description styling */
+.nut-card p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Button styling */
+.nut-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff9800;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.nut-button:hover {
+    background-color: #e68900;  /* Darker orange on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.nut-button:active {
+    transform: translateY(1px);  /* Press effect */
+}
+
+/* Responsive design: adjust layout for smaller screens */
+@media (max-width: 768px) {
+    .nuts-menu {
+        grid-template-columns: 1fr;  /* Switch to single column on smaller screens */
+    }
+
+    .nut-card {
+        width: 100%;                 /* Full-width cards on smaller screens */
+        margin: 15px auto;
+    }
+
+    .nut-image {
+        width: 120px;                /* Slightly smaller images */
+        height: 120px;
+    }
+
+    .nut-card h2 {
+        font-size: 1.5em;            /* Smaller heading font on small screens */
+    }
+
+    .nut-button {
+        width: 100%;                 /* Full-width button on mobile */
+    }
+}
+
+/* Cart summary styling */
+.cart-summary {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;       /* Light background for the cart summary */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 100%;                     /* Full width to match layout */
+    max-width: 600px;                /* Max width for cart summary */
+    text-align: left;                /* Align text to left */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.cart-summary h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.cart-summary ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart-summary ul li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #555;
+}

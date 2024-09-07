@@ -5,14 +5,18 @@
     align-items: center;
     padding: 40px;
     margin: 0 auto;
-    max-width: 800px;  /* Center the content */
+    max-width: 800px;         /* Ensure the container doesn't stretch too wide */
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 10px;       /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     text-align: center;
+    box-sizing: border-box;    /* Ensure padding is included within width */
   }
   
   .contact-container h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #333;  /* Darker text for the heading */
+    color: #333;
   }
   
   .contact-container p {
@@ -24,12 +28,17 @@
   .contact-form {
     display: flex;
     flex-direction: column;
-    width: 100%;                /* Ensure form takes full width */
-    max-width: 600px;            /* Limit form width */
+    width: 100%;
+    max-width: 600px;          /* Ensure the form stays within the container */
+    background-color: #fff;     /* White background for form */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;     /* Include padding within the width */
   }
   
   .form-group {
-    margin-bottom: 20px;         /* Add space between form elements */
+    margin-bottom: 20px;
   }
   
   .form-group label {
@@ -41,11 +50,13 @@
   
   .form-group input,
   .form-group textarea {
-    width: 100%;
-    padding: 10px;
+    width: 100%;               /* Make input fields take full width of form */
+    padding: 12px 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1em;
+    box-sizing: border-box;     /* Include padding within the width */
+    transition: border-color 0.3s ease;
   }
   
   .form-group input:focus,
@@ -55,16 +66,37 @@
   }
   
   .contact-button {
-    padding: 10px 20px;
-    background-color: #ff9800;  /* Orange background */
+    padding: 12px 20px;
+    background-color: #ff9800;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
   }
   
   .contact-button:hover {
-    background-color: #e68900;  /* Darker orange on hover */
+    background-color: #e68900;   /* Darker orange on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+  }
+  
+  .contact-button:active {
+    transform: translateY(1px);  /* Slight press effect */
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .contact-container {
+      padding: 20px;
+    }
+  
+    .contact-form {
+      padding: 15px;
+    }
+  
+    .contact-button {
+      width: 100%;               /* Full-width button on smaller screens */
+    }
   }
   

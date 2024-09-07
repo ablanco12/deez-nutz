@@ -1,33 +1,61 @@
 .home-container {
     display: flex;
-    flex-direction: column;  /* Stack elements in a single column */
-    align-items: center;     /* Center elements horizontally */
-    justify-content: center; /* Center elements vertically */
-    min-height: 50vh;       /* Make the container fill the viewport height */
-    text-align: center;      /* Center the text */
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .home-container h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .home-container p {
+    font-size: 1.4em;
+    color: #666;
+    margin-bottom: 20px;
   }
   
   .banner-image {
     max-width: 25%;
     height: auto;
-    margin: 20px 0;          /* Add margin above and below the image */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
   }
   
   .cta-button {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 12px 25px;
     background-color: #ff9800;
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    margin-top: 20px;        /* Add space above the button */
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
   }
   
-  h1 {
-    margin-bottom: 20px;     /* Add space below the title */
+  .cta-button:hover {
+    background-color: #e68900;  /* Darker orange on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
   }
   
-  p {
-    margin-bottom: 20px;     /* Add space below the paragraph */
+  .cta-button:active {
+    transform: translateY(1px);  /* Press effect */
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .home-container h1 {
+      font-size: 2.4em;
+    }
+  
+    .home-container p {
+      font-size: 1.2em;
+    }
   }
   
